@@ -10,6 +10,6 @@ app.use(express.static("public"));
 
 app.use(route);
 
-app.listen(3000, err => {
+app.listen(process.env.PORT || 3000, err => {
     err ? console.log("Error in app listen"):  console.log("Server is running...");
 })
