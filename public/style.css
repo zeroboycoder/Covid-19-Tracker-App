@@ -1,0 +1,108 @@
+html,body{
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-size: 15px;
+}
+
+body{
+    background: #c31432;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #e7e7e7;
+}
+
+h1{
+    margin: 1rem 0;
+    text-align: left;
+    font-size: 250%;
+    font-weight: 300;
+}
+
+h2{
+    text-align: left;
+    margin-right: 4rem;
+    font-size: 180%;
+    font-weight: 300;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+}
+
+.container{
+    width: 92%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.inputBox{
+    display: block;
+    text-align: right;
+    padding: 0 1rem 1.7rem 0;
+}
+
+input{
+    font-size: 103%;
+    border-radius: 0.5rem;
+    border: 0px solid transparent;
+    padding: 0.5rem;
+    transition: box-shadow 0.2s;
+    width: 230px;
+    margin-bottom: 1%;
+}
+
+input:hover{
+    box-shadow: 0px 0px 10px #aaa;
+}
+
+button{
+    padding: 6.5px 15px;
+    border-radius: 15px;
+    font-size: 103%;
+    background-color: transparent;
+    color: #ccc;
+    border: 1px solid #ccc;
+    margin-left: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+button:hover{
+    background-color: #ccc;
+    color: #000;
+}
+
+/* ========== */
+/* Body */
+/* ========== */
+
+.box{
+    text-align: left;
+    display: inline-block;
+    width: 230px;
+    padding: 0.5rem 1rem 1rem 1rem;
+    margin: 1rem;
+    border: 1px solid #333;
+    box-shadow: 0px 2px 7px #222222d8;
+    border-radius: 4px;
+    transition: border 0.2s, box-shadow 0.2s;
+}
+
+.country{
+    font-size: 130%;
+    margin-bottom: 0.5rem;
+}
+
+li{
+    line-height: 1.7;
+    font-size: 105%;
+    letter-spacing: 1px;
+}
+
+.box:hover{
+    border: 1px solid #555;
+    box-shadow: 2px 2px 5px #444;
+}

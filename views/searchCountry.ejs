@@ -1,0 +1,35 @@
+<%- include("./partials/header.ejs") %>
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/query.css">
+</head>
+<body>
+
+<div class="container">
+    <h1><a href="/">Covid-19 Tracker App</a></h1>
+    <form action="search" method="POST">
+        <div class="inputBox">
+            <input type="text" name="userInput" value="<%=userInput%>" placeholder="Search...">
+            <div>
+                <button>Search</button>
+            </div>
+        </div>
+    </form>
+    <% if(condition) { %>
+        <div class="box">
+            <h3 class="country"><%= data.country_name %></h3>
+            <ul>
+                <li>Cases - <%= data.cases %></li>
+                <li>Deaths - <%= data.deaths %></li>
+                <li>Recovered - <%= data.total_recovered %></li>
+                <li>New Cases - <%= data.new_cases %></li>
+                <li>New Death - <%= data.new_deaths %></li>
+                <li>Total per minute - <%= data.total_cases_per_1m_population %></li>
+            </ul>
+        </div>
+    <% } else{ %>
+        <h2>Country Not found!</h2>
+    <% } %> 
+</div>
+
+
+<%- include("./partials/footer.ejs") %> 
