@@ -1,0 +1,48 @@
+<%- include("./partials/header.ejs") %>
+</head>
+<body>
+
+<%- include("./partials/nav.ejs") %> 
+<div class="container">
+    <div class="body">
+        <form action="check_with_date" method="GET">
+            <div class="inputForm">
+                <div class="input-group">
+                    <label for="country">Country Name : </label>
+                    <input type="text" name="country" id="country" placeholder="eg. China" value="<%=country%>">
+                </div>
+                <div class="input-group">
+                    <label for="date">Date : </label>
+                    <input type="text" name="date" id="date" placeholder="eg. 2020-03-26" value="<%=date%>">
+                </div>
+                <div>
+                    <button>Check</button>
+                </div>
+            </div>
+        </form>
+        <div>
+            <% if(datas.length>0) { %>
+                <h2 class="country_name">
+                    <%= country_name %> 
+                </h2>
+                <% datas.forEach(data => { %>
+                    <div class="box">
+                        <ul>
+                            <li>Total cases - <%= data.total_cases %></li>
+                            <li>New cases - <%= data.new_cases %></li>
+                            <li>Active cases - <%= data.active_cases %></li>
+                            <li>Total deaths - <%= data.total_deaths %></li>
+                            <li>New Death - <%= data.new_deaths %></li>
+                            <li>Total recovered - <%= data.total_recovered %></li>
+                            <li>Total per minute - <%= data.total_cases_per1m %></li>
+                            <li>Record date - <br> <%= data.record_date %></li>
+                        </ul>
+                    </div>
+                <% }) %> 
+            <% } %>
+        </div>
+    </div>
+</div>
+
+
+<%- include("./partials/footer.ejs") %> 

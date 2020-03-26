@@ -7,4 +7,8 @@ route.get("/", controller.getIndex)
 
 route.post("/search", controller.getSearchController);
 
+route.get("/latest_case", controller.getLatestCase);
+
+route.get("/check_with_date", controller.getCheckWithDate);
+
 module.exports = route;

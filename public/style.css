@@ -3,6 +3,8 @@ html,body{
     box-sizing: border-box;
     overflow-x: hidden;
     font-size: 15px;
+    padding: 0;
+    margin: 0;
 }
 
 body{
@@ -13,15 +15,15 @@ body{
 }
 
 h1{
-    margin: 1rem 0;
-    text-align: left;
+    margin: 1.5rem 0 0 1rem;
     font-size: 250%;
     font-weight: 300;
+    display: inline-block;
 }
 
 h2{
     text-align: left;
-    margin-right: 4rem;
+    margin: 0.5rem 4rem 0.5rem 0;
     font-size: 180%;
     font-weight: 300;
 }
@@ -33,15 +35,60 @@ a{
 }
 
 .container{
-    width: 92%;
+    width: 94%;
     margin: 0 auto;
     text-align: center;
 }
 
-.inputBox{
-    display: block;
+/* =========== */
+/* Navigation */
+/* =========== */
+.navigation{
+    text-align: left;
+    position: fixed;
+    width: 100%;
+    margin: 0;
+}
+
+.navigation div{
+    float: right;
+    margin-right: 1rem;
+}
+
+.nav{
+    display: inline-block;
     text-align: right;
-    padding: 0 1rem 1.7rem 0;
+    font-size: 128%;
+    margin-top: 0;
+}
+
+.nav li{
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 1rem 0 0;
+}
+
+.nav li a{
+    border-bottom: 1px solid transparent;
+    text-decoration: none;
+    padding-bottom: 7px;
+    transition: border-bottom 0.3s, text-shadow 0.3s;
+}
+
+.nav li a:hover{
+    border-bottom: 1px solid #d3d3d3;
+    text-shadow: 0px 0px 7px #bbb;
+}
+
+form{
+    display: inline-block;
+}
+
+.inputBox{
+    text-align: right;
+    margin: 1rem 1rem 0 0;
+    position: relative;
+    top: 1rem;
 }
 
 input{
@@ -50,8 +97,8 @@ input{
     border: 0px solid transparent;
     padding: 0.5rem;
     transition: box-shadow 0.2s;
-    width: 230px;
-    margin-bottom: 1%;
+    width: 200px;
+    margin-bottom: 0.5rem;
 }
 
 input:hover{
@@ -75,14 +122,58 @@ button:hover{
     color: #000;
 }
 
+/* Waypoint Nav */
+.waypoint-nav{
+    font-size: 14px;
+    background-color: #e7e7e7;
+}
+
+.waypoint-nav div{
+    height: 1.5rem;
+}
+
+.waypoint-nav h1{
+    color: #555;
+    margin: 1rem 0 0.8rem 1rem;
+    font-size: 230%;
+}
+
+.waypoint-nav div .nav li a{
+    color: #555;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.3s,text-shadow 0.3s;
+}
+
+.waypoint-nav div .nav li a:hover{
+    border-bottom: 1px solid #555;
+    text-shadow: 0px 0px 7px #aaa;
+}
+
+.waypoint-nav div form .inputBox{
+    top: 0rem;
+}
+
+.waypoint-nav div form .inputBox input{
+    color: #555;
+}
+
+.waypoint-nav div form div button{
+    color: #555;
+    border: 1px solid #747474;
+}
+
 /* ========== */
 /* Body */
 /* ========== */
 
+.body{
+    padding-top: 7%;
+}
+
 .box{
     text-align: left;
     display: inline-block;
-    width: 230px;
+    width: 235px;
     padding: 0.5rem 1rem 1rem 1rem;
     margin: 1rem;
     border: 1px solid #333;
@@ -105,4 +196,75 @@ li{
 .box:hover{
     border: 1px solid #555;
     box-shadow: 2px 2px 5px #444;
+}
+
+/* ========== */
+/* Latest News */
+/* ========== */
+.worldBox{
+    font-size: 110%;
+    text-align: left;
+    padding: 0.5rem 1rem 1rem 1rem;
+    width: 70%;
+    margin: 1rem auto;
+    padding: 1.5rem;
+    border: 1px solid #333;
+    box-shadow: 0px 2px 7px #222222d8;
+    border-radius: 4px;
+    transition: border 0.2s, box-shadow 0.2s;
+}
+
+.worldBox:hover{
+    border: 1px solid #555;
+    box-shadow: 2px 2px 5px #444;
+}
+
+.latest_header::after{
+    content: "";
+    display: block;
+    height: 1.5px;
+    width: 30%;
+    background-color: #ccc;
+    margin: 0.5rem 0;
+}
+
+td{
+    padding: 7px;
+}
+
+/* ========== */
+/* Check With Date */
+/* ========== */
+.inputForm{
+    border: 1px solid #8f8f8f;
+    padding: 3rem;
+    margin: 0.5rem 1rem 1rem 1rem;
+    border-radius: 5px;
+    box-shadow: 2px 2px 7px #111;
+}
+
+.inputForm div{
+    display: inline-block;
+}
+
+.input-group{
+    margin-right: 1.7rem;
+}
+
+.input-group label{
+    margin-right: 0.5rem;
+}
+
+.country_name{
+    font-size: 180%;
+    text-align: center;
+}
+
+.country_name::after{
+    content: "";
+    display: block;
+    height: 1.5px;
+    width: 10%;
+    background-color: #ccc;
+    margin: 0.5rem auto;
 }

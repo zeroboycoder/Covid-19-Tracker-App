@@ -1,0 +1,22 @@
+<nav class="navigation">
+    <h1><a href="/">Covid-19 Tracker App</a></h1>
+    <div>
+        <ul class="nav">
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li>
+                <a href="/latest_case">Latest Cases</a>
+            </li>
+            <li>
+                <a href="/check_with_date">Check With Date</a>
+            </li>
+        </ul>
+        <form action="search" method="POST">
+            <div class="inputBox">
+                <input type="text" name="userInput" value="<%=userInput%>" placeholder="Search...">
+                <button>Search</button>
+            </div>
+        </form>
+    </div>
+</nav>

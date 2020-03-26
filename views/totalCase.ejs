@@ -1,0 +1,40 @@
+<%- include("./partials/header.ejs") %>
+</head>
+<body>
+
+<%- include("./partials/nav.ejs") %>
+<div class="container">
+    <div class="body">
+        <div class="worldBox">
+            <h2 class="latest_header">World Latest Cases</h2>
+            <table>
+                <tr>
+                    <td>Total cases</td>
+                    <td><%=data.total_cases%></td>
+                </tr>
+                <tr>
+                    <td>Total deaths</td>
+                    <td><%=data.total_deaths%></td>
+                </tr>
+                <tr>
+                    <td>Total Recovered</td>
+                    <td><%=data.total_recovered%></td>
+                </tr>
+                <tr>
+                    <td>New cases</td>
+                    <td><%=data.new_cases%></td>
+                </tr>
+                <tr>
+                    <td>New deaths</td>
+                    <td><%=data.new_deaths%></td>
+                </tr>
+                <tr>
+                    <td>Update Time</td>
+                    <td><%=data.statistic_taken_at%></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<%- include("./partials/footer.ejs") %> 
